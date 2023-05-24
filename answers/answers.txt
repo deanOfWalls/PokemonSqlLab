@@ -1,0 +1,30 @@
+PART 1:
+
+creating schema:
+    CREATE SCHEMA pokemon;
+
+unpacking the zip:
+    unzip pokemon_sql.zip
+
+SOURCE *.sql;  //do this for each sql file
+
+PART 2:
+
+list all types pokemon can have:
+    SHOW * FROM types;
+
+what is pokemon with id 45?:
+    SELECT * FROM pokemons WHERE id=45;
+    answer =  evee
+
+how many types are there?:
+    SELECT * FROM types;
+    answer = 18
+
+how many pokemon have a secondary type?;
+
+SELECT COUNT(*) AS entry_count from pokemons WHERE secondary_type is NOT NULL;
+can also use
+SELECT * FROM pokemons WHERE secondary_type is NOT NULL;
+answer = 316
+
